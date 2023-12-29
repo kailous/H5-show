@@ -1,0 +1,16 @@
+{
+  "name": "h5-show",
+  "version": "1.0.0",
+  "description": "h5 展示页面",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "kailous",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1"
+  }
+}

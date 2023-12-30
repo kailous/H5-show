@@ -1,4 +1,5 @@
 const express = require('express');
+const qrcode = require('qrcode-terminal'); // 导入qrcode-terminal库
 const app = express();
 const os = require('os');
 const fs = require('fs');
@@ -52,8 +53,13 @@ app.get('/', (req, res) => {
 // 启动Express.js应用
 app.listen(port, () => {
   localIPs.forEach(ip => {
-  console.log(`开始运行：http://localhost:${port}`);
+  console.log(`服务器开始运行：http://localhost:${port}`);
   console.log(`移动端预览：http://${ip}:${port}`)
-  console.log(`按下 Ctrl+C 关闭`)
+  // 生成二维码并输出到控制台
+  qrcode.generate(`http://${ip}:${port}`, { small: true }, function (qrcode) {
+    console.log('\n使用微信扫一扫\n直接预览');
+    console.log(qrcode);
+  });
+  console.log(`\n按下 Ctrl+C 关闭服务器`)
 });
 });

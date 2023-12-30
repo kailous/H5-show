@@ -1,0 +1,54 @@
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap:2vh;
+}
+
+form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+form .form-group input,form .form-group button {
+    line-height: 100%;
+    padding: 0.8em;
+    border-radius: 15px;
+    border: none;
+}
+
+form .form-group button {
+    margin-top: 2em;
+}
+form .form-group label {
+    padding: 0.8em;
+    display: flex;
+    align-items: center;
+    height: 32px;
+}
+form .form-group .error-message span P {
+    background-color: black;
+    color: aliceblue;
+
+    padding: 10px 15px;
+    border-radius: 20px;
+    line-height: 100%;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+form .form-group .error-message span {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+form .form-group .error-message span::after {
+    content: '◆';
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    left: -8px;
+    z-index: 1;
+    line-height: 100%;
+}

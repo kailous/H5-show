@@ -1,0 +1,40 @@
+  <!-- 表单组件 -->
+  <link rel="stylesheet" type="text/css" href="/components/css/form-component.css">
+  <form class="font-size-1 contactForm" id="contactForm" action="#" method="post" novalidate>
+    <div class="form-group">
+        <label for="name">
+        姓名：
+        <div class="error-message name-error" id="name-error"></div>
+        </label>
+        <input class="font-size-1 name" type="text" id="name" name="name" required placeholder="请输入您的姓名" />
+    </div>
+  
+    <div class="form-group">
+        <label for="phone">
+        手机号码：
+        <div class="error-message phone-error" id="phone-error"></div>
+        </label>
+        <input class="font-size-1 phone" type="tel" id="phone" name="phone" required pattern="^[1][3-9][0-9]{9}$" placeholder="请输入您的手机号码" />
+    </div>
+  
+    <div class="form-group">
+        <label for="company">
+        企业名称：
+        <div class="error-message company-error" id="company-error"></div>
+        </label>
+        <input class="font-size-1 company" type="text" id="company" name="company" required minlength="2" placeholder="请输入您的企业名称" />
+    </div>
+  
+    <div class="form-group">
+        <label for="number">
+        随行人数：
+        <div class="error-message number-error" id="number-error"></div>
+        </label>
+        <input class="font-size-1 number" type="number" id="number" name="number" placeholder="请输入随行人数" max="100" />
+    </div>
+  
+    <div class="form-group">
+        <button class="font-size-1" type="submit">提交</button>
+    </div>
+  </form>
+  <script src="/components/js/form-component.js"></script>

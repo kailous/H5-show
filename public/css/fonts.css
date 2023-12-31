@@ -1,3 +1,62 @@
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "alibaba-thin";font-weight: 250;src: url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/qwqMFkkNkKgN.woff2") format("woff2"),
+    url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/P3vxSBwiNx8k.woff") format("woff");
+    font-display: swap;
+  }
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "alibaba-light";font-weight: 300;src: url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/W09lLm1uLqam.woff2") format("woff2"),
+    url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/X7oEFp1v5ezJ.woff") format("woff");
+    font-display: swap;
+  }
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "alibaba-regular";font-weight: 400;src: url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/aUjDI7aBTRM7.woff2") format("woff2"),
+    url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/D1XFYJnyT87j.woff") format("woff");
+    font-display: swap;
+  }
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "alibaba-medium";font-weight: 500;src: url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/CrLm6qEoHlfm.woff2") format("woff2"),
+    url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/aNe973nMAzAo.woff") format("woff");
+    font-display: swap;
+  }
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "alibaba-semiBold";font-weight: 600;src: url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/0hCEy8kskD1d.woff2") format("woff2"),
+    url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/jxWLo3iaROjm.woff") format("woff");
+    font-display: swap;
+  }
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "alibaba-bold";font-weight: 700;src: url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/gIGhpQ8xrKUl.woff2") format("woff2"),
+    url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/FTXIgMeN8H1G.woff") format("woff");
+    font-display: swap;
+  }
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "alibaba-extraBold";font-weight: 800;src: url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/WMO8XmKZ8BfE.woff2") format("woff2"),
+    url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/0yWGti0xWMGV.woff") format("woff");
+    font-display: swap;
+  }
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "alibaba-heavy";font-weight: 900;src: url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/vEYxRsi4ypcP.woff2") format("woff2"),
+    url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/40bkurRabeLj.woff") format("woff");
+    font-display: swap;
+  }
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "alibaba-black";font-weight: 1000;src: url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/XVhmRomQUu1Z.woff2") format("woff2"),
+    url("//at.alicdn.com/wf/webfont/HJxyg97NsGqJ/Rxu6aI0njECK.woff") format("woff");
+    font-display: swap;
+  }
+
+body {
+    font-family: 'alibaba-regular';
+}
+
 .font-size-1{
     font-size: 1em !important;
 }

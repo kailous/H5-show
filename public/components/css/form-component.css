@@ -1,8 +1,9 @@
 form {
     display: flex;
     flex-direction: column;
-    padding: 25px;
     gap:2vh;
+    position: relative;
+    z-index: 100;
 }
 
 form .form-group {

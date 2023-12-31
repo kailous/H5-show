@@ -1,0 +1,22 @@
+/* 漂浮动画 */
+.circularMove {
+    animation: circularMove 20s linear infinite; /* 应用动画 */
+}
+/* 漂浮动画 */
+@keyframes circularMove {
+    0% {
+        transform: translateX(0) translateY(20px); /* 初始位置 */
+    }
+    25% {
+        transform: translateX(20px) translateY(0); /* 上右移动 */
+    }
+    50% {
+        transform: translateX(0) translateY(-20px); /* 下右移动 */
+    }
+    75% {
+        transform: translateX(-20px) translateY(0); /* 下左移动 */
+    }
+    100% {
+        transform: translateX(0) translateY(20px); /* 回到初始位置 */
+    }
+}

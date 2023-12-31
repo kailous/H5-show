@@ -3,17 +3,35 @@ const qrcode = require('qrcode-terminal'); // 导入qrcode-terminal库
 const app = express();
 const os = require('os');
 const fs = require('fs');
+// const nodemon = require('nodemon');
 const path = require('path');
 
 // 导入组件
-const headHTML = require('./components/layout/head'); // 导入表单组件模块
+const headHTML = require('./components/layout/head');
+
 // 导入页面
-const page07 = require('./pages/07');
-const page08 = require('./pages/08');
+const pageModules = require('./pages/pages');
+
+// 在根路径的路由处理中插入index.html的内容
+app.get('/', (req, res) => {
+  const completePageContent = indexHTML
+    .replace('${headHTML}', headHTML)
+    .replace('${page01}', pageModules['01'])
+    .replace('${page02}', pageModules['02'])
+    .replace('${page03}', pageModules['03'])
+    .replace('${page04}', pageModules['04'])
+    .replace('${page05}', pageModules['05'])
+    .replace('${page06}', pageModules['06'])
+    .replace('${page07}', pageModules['07'])
+    .replace('${page08}', pageModules['08'])
+  res.send(completePageContent);
+});
+
+// 获取页面数量
+const pageCount = Object.keys(pageModules).length;
 
 // 读取HTML文件的内容
 const indexHTML = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
-
 
 // 静态文件目录
 app.use(express.static('public'));
@@ -39,27 +57,23 @@ const getLocalIPs = () => {
 const port = 3000; // 输出端口号
 const localIPs = getLocalIPs();  // 输出本机IP地址
 
-
-// 在根路径的路由处理中插入index.html的内容
-app.get('/', (req, res) => {
-  const completePageContent = indexHTML
-    .replace('${headHTML}', headHTML)
-    .replace('${page07}', page07)
-    .replace('${page08}', page08);
-
-  res.send(completePageContent);
-});
-
 // 启动Express.js应用
-app.listen(port, () => {
+app.listen(port, (changedFiles) => {
   localIPs.forEach(ip => {
+    // console.log('修改的文件：');
+    // console.log(changedFiles);  
   console.log(`服务器开始运行：http://localhost:${port}`);
-  console.log(`移动端预览：http://${ip}:${port}`)
+  console.log(`\n共有${pageCount}个页面,请使用微信扫一扫预览.`);
+  console.log(`或者直接访问：http://${ip}:${port}`)
   // 生成二维码并输出到控制台
   qrcode.generate(`http://${ip}:${port}`, { small: true }, function (qrcode) {
-    console.log('\n使用微信扫一扫\n直接预览');
     console.log(qrcode);
   });
-  console.log(`\n按下 Ctrl+C 关闭服务器`)
+  console.log(`\n按下 Ctrl+C 关闭服务器\n或输入rs重新启动服务器`)
 });
+});
+// 服务器关闭时的处理
+process.on('SIGINT', () => {
+  console.log('\n服务器已关闭');
+  process.exit();
 });

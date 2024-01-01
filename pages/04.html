@@ -21,9 +21,29 @@
             top: 70vh;
             flex-shrink: 0;
       }
+      .wrap {
+            flex-wrap: wrap !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    flex-direction: row !important;
+      }
+      .wrap img {
+                        width: 50vw;
+                        height: calc(100% / 3);
+                        object-fit: cover !important;
+      }
 </style>
 <div class="pageContent">
-      ${formComponentHTML}
+      <div class="main wrap mainbg">
+            <img src="/img/04/06.png" alt="">
+            <img src="/img/04/05.png" alt="">
+            <img src="/img/04/04.png" alt="">
+            <img src="/img/04/03.png" alt="">
+            <img src="/img/04/02.png" alt="">
+            <img src="/img/04/01.png" alt="">
+      </div>
       <div class="turnTips"></div>
       <div class="long">
             <img class="circularMove" src="/img/long.png" alt="">

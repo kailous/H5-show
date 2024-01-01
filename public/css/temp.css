@@ -1,0 +1,25 @@
+  /* 字体包引入开始 */
+  
+  @font-face {
+    font-family: "HarmonyOSHans-Light";
+    src: url("https://developer.harmonyos.com/assets/fonts/HarmonyOSHans-Light.woff2") format("woff2"),
+      url("https://developer.harmonyos.com/assets/fonts/HarmonyOSHans-Light.woff") format("woff");
+  }
+  @font-face {
+    font-family: "HarmonyOSHans-Regular";
+    src: url("https://developer.harmonyos.com/assets/fonts/HarmonyOSHans-Regular.woff2") format("woff2"),
+    url("https://developer.harmonyos.com/assets/fonts/HarmonyOSHans-Regular.woff") format("woff");
+  }
+  @font-face {
+    font-family: "HarmonyOSHans-Medium";
+    src: url("https://developer.harmonyos.com/assets/fonts/HarmonyOSHans-Medium.woff2") format("woff2"),
+      url("https://developer.harmonyos.com/assets/fonts/HarmonyOSHans-Medium.woff") format("woff");
+  }
+  @font-face {
+      font-family: "HarmonyOSHans-Bold";
+        src: url("https://developer.harmonyos.com/assets/fonts/HarmonyOSHans-Bold.woff2") format("woff2"),
+      url("https://developer.harmonyos.com/assets/fonts/HarmonyOSHans-Bold.woff") format("woff");
+  }
+  
+
+

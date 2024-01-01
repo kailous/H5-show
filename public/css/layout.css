@@ -4,6 +4,10 @@ body,html,.pageContent,.pages {
     margin: 0;
     padding: 0;
 }
+h1,h2,h3,h4,h5,h6,p,span,div{
+    margin: 0;
+    padding: 0;
+}
 .pages {
     display: block;
     position: relative; 
@@ -26,4 +30,12 @@ body,html,.pageContent,.pages {
 }
 div.main {
     padding: 25px;
+    display: flex;
+    position: absolute;
+    z-index: 100;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
 }

@@ -1,8 +1,9 @@
 <style>
-      .pageContent{
+      .pageContent {
             background: radial-gradient(114.85% 114.46% at 100% 0%, #FF30B9 0%, #F03 38.65%, #FF5C00 100%);
             background: radial-gradient(114.85% 114.46% at 100% 0%, color(display-p3 1 0.2902 0.7098) 0%, color(display-p3 1 0.1529 0.2471) 38.65%, color(display-p3 1 0.4157 0.1451) 100%);
       }
+
       .long {
             position: absolute;
             bottom: 0;
@@ -21,13 +22,41 @@
             top: 70vh;
             flex-shrink: 0;
       }
+
+      .mainbg {
+            /* margin-top: 100px; */
+            justify-content: flex-start !important;
+            background-color: hsla(0, 100%, 100%, 0.25);
+            gap: 15px;
+            backdrop-filter: blur(97.5px);
+            -webkit-backdrop-filter: blur(97.5px);
+      }
+
+      p {
+            font-size: 4vw;
+            font-weight: 400;
+            line-height: 160%;
+            text-align: justify;
+      }
+      h3 {
+            position: relative;
+    z-index: 100;
+    padding: 25px;
+    font-size: 6.5vw;
+    line-height: 120%;
+      }
 </style>
 <div class="pageContent">
-      <div class="main">
-      ${formComponentHTML}
+      <h3>尊敬的<br>合作商伙伴:</h3>
+      <div class="main mainbg">
+            <p>龙年降至，盛世将启。经过过去三个月的不懈耕耘，REVER和三谷在线下渠道已崭露头角，而这份收获离不开您及贵公司的陪伴和支持。盛世龙年，我们仍坚信，与您携手共进，必将宏图大展。</p>
+            <p>我们诚挚邀请您于2024年1月19日至江城武汉，参加“谷乐齐鸣 龙跃九州”三谷·乐若 2024战略发布会。</p>
+            <p>此次大会的主题为“谷乐齐鸣 龙跃九州”，寓意着我们在新的一年里将共同迎接新的挑战与机遇，共同创造更加辉煌的业绩。在大会上，我们将分享公司的新品上市计划、市场策略以及未来的发展规划，同时也会与您交流业务合作中的问题与经验，共同探讨行业趋势及下一站风口方向。</p>
+            <p>在此，我们再次向您发出最热烈的邀请。期待在武汉与您相见，共同开启一段崭新的合作之旅！</p>
+      </div>
       <div class="turnTips"></div>
       <div class="long">
             <img class="circularMove" src="/img/long.png" alt="">
       </div>
-</div>
+
 </div>

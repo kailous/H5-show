@@ -21,9 +21,71 @@
             top: 70vh;
             flex-shrink: 0;
       }
+      .title{
+            display: flex;
+    width: 100%;
+    justify-content: space-between;
+      }
+      .title h3{
+            padding: 0;
+      }
+      #page06Content .main {
+    gap: 5vh !important;
+}
+#page06Content .main .list {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+#page06Content .main .list .date div {
+    gap:1vh;
+}
+#page06Content .main .list .date {
+      font-size: 5.5vw;
+      font-weight: 100;
+}
+#page06Content .main h5 {
+      font-size: 6vw;
+      font-weight: 700;
+      line-height: normal;
+}
 </style>
 <div class="pageContent">
-      ${formComponentHTML}
+      <div class="main mainbg">
+            <div class="title">
+                  <h3>会议流程</h3>
+                  <img height="26" src="/img/LOGO.svg" alt="">
+            </div>
+            <div class="list">
+                  <h6 class="date">2024 1/<b>19 周六</b></h6>
+                  <h5 class="content">嘉宾报道 办理入住</h5>
+            </div>
+            <div class="list">
+                  <h6 class="date">2024 1/<b>20 周日</b></h6>
+                        <div>
+                              <p class="time">上午</p>
+                              <h5 class="content">
+                                    品牌战略发布<br>
+                                    新品上市发布<br>
+                                    线下战略发布
+                              </h5>
+                        </div>
+                        <div>
+                              <p class="time">下午</p>
+                              <h5 class="content">
+                                    屈臣氏启动大会<br>
+                                    三大渠道运营策略<br>
+                                    REVER工厂参观
+                              </h5>
+                        </div>
+                        <div>
+                              <p class="time">晚上</p>
+                              <h5 class="content">
+                                    迎宾晚宴
+                              </h5>
+                        </div>
+            </div>
+      </div>
       <div class="turnTips"></div>
       <div class="long">
             <img class="circularMove" src="/img/long.png" alt="">

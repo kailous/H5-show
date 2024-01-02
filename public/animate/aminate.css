@@ -1,0 +1,9 @@
+/* 载入动画 */
+@import url('start.css'); /* 开始动画 */
+@import url('leave.css'); /* 离开动画 */
+@import url('continuous.css'); /* 持续动画 */
+
+/* 动画属性 */
+@import url('anim-time.min.css'); /* 动画时间 */
+@import url('anim-timing.min.css'); /* 动画速度 */
+@import url('anim-iteration.min.css'); /* 动画重复 */

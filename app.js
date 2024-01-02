@@ -14,6 +14,7 @@ const pageModules = require('./pages');
 
 // 在根路径的路由处理中插入index.html的内容
 app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html')); // 假设主页是 public 文件夹下的 index.html
   const completePageContent = indexHTML
     .replace('${headHTML}', headHTML)
     .replace('${page01}', pageModules['01'])

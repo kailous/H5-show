@@ -1,9 +1,14 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 const fs = require('fs');
 const path = require('path');
 const qrcode = require('qrcode-terminal');
 const os = require('os');
+
+// 首先配置 body-parser 中间件
+app.use(bodyParser.json({ limit: '50mb' }));
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 // 导入组件
 const formComponentHTML = require('./components/form-component');

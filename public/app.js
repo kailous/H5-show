@@ -22,8 +22,6 @@ pages.forEach(page => {
   }
 });
 
-// const pageModules = require('./pages');
-
 app.get('/', (req, res) => {
   const completePageContent = indexHTML
     .replace('${headHTML}', headHTML)

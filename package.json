@@ -5,16 +5,9 @@
   "description": "h5 展示页面",
   "author": "kailous",
   "main": "app.js",
-  "url": "/",
-  "cover": "/img/cover.png",
-  "keywords": [
-    "h5",
-    "show"
-  ],
   "scripts": {
-    "test": "nodemon app.js",
     "start": "node app.js",
-    "install": "npm install"
+    "test": "nodemon app.js"
   },
   "license": "ISC",
   "dependencies": {

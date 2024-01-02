@@ -32,9 +32,14 @@ const indexHTML = fs.readFileSync(path.join(__dirname, '/index.html'), 'utf8');
 
 // 定义根路由
 app.get('/', (req, res) => {
-  const completePageContent = indexHTML
-    .replace('${headHTML}', headHTML)
-    .replace(/\${page(\d+)}/g, (_, pageNumber) => pageModules[pageNumber] || `页面 ${pageNumber} 未找到`);
+  let completePageContent = indexHTML.replace('${headHTML}', headHTML);
+  
+  // 遍历并替换每个页面内容
+  for (let i = 1; i <= 8; i++) {
+    const pageContent = pageModules[`0${i}`] || `页面 0${i} 未找到`;
+    completePageContent = completePageContent.replace(`\${page0${i}}`, pageContent);
+  }
+
   res.send(completePageContent);
 });
 

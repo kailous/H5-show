@@ -5,7 +5,7 @@ const path = require('path');
 const formComponentHTML = require('./components/form-component');
 
 // 遍历pages目录下的所有html文件并读取文件内容
-const pagesDirectory = path.join(__dirname, './pages');
+const pagesDirectory = path.join(__dirname, 'pages');
 const pages = fs.readdirSync(pagesDirectory);
 let pageModules = {};
 

@@ -10,7 +10,7 @@ const path = require('path');
 const headHTML = require('./components/layout/head');
 
 // 导入页面
-const pageModules = require('./pages/pages');
+const pageModules = require('./pages');
 
 // 在根路径的路由处理中插入index.html的内容
 app.get('/', (req, res) => {

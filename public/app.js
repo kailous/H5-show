@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 const pageCount = Object.keys(pageModules).length;
 
 // 读取HTML文件的内容
-const indexHTML = fs.readFileSync(path.join(__dirname, 'public', 'index.html'), 'utf8');
+const indexHTML = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
 // const indexHTML = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
 
 // 静态文件目录

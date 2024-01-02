@@ -6,8 +6,7 @@
   "author": "kailous",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "build": "cp -r public/ dist/public" 
+    "start": "node app.js"
   },
   "license": "ISC",
   "dependencies": {

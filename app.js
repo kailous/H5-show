@@ -11,13 +11,9 @@ const headHTML = require('./components/layout/head');
 
 // 导入页面
 const pageModules = require('./pages');
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
 
 // 在根路径的路由处理中插入index.html的内容
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html')); // 假设主页是 public 文件夹下的 index.html
   const completePageContent = indexHTML
     .replace('${headHTML}', headHTML)
     .replace('${page01}', pageModules['01'])
@@ -35,7 +31,8 @@ app.get('/', (req, res) => {
 const pageCount = Object.keys(pageModules).length;
 
 // 读取HTML文件的内容
-const indexHTML = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
+const indexHTML = fs.readFileSync(path.join(__dirname, 'public', 'index.html'), 'utf8');
+// const indexHTML = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
 
 // 静态文件目录
 app.use(express.static('public'));

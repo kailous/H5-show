@@ -1,13 +1,21 @@
 {
   "name": "h5-show",
   "version": "1.0.0",
+  "title": "谷乐齐鸣 龙跃九州",
   "description": "h5 展示页面",
-  "main": "index.js",
+  "author": "kailous",
+  "main": "app.js",
+  "url": "/",
+  "cover": "/img/cover.png",
+  "keywords": [
+    "h5",
+    "show"
+  ],
   "scripts": {
     "test": "nodemon app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "install": "npm install"
   },
-  "author": "kailous",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",

@@ -54,7 +54,7 @@ const getLocalIPs = () => {
   return ips.length > 0 ? ips : ['localhost'];
 };
 
-const port = 3000; // 输出端口号
+const port = process.env.PORT || 3000;
 const localIPs = getLocalIPs();  // 输出本机IP地址
 
 // 启动Express.js应用
@@ -71,9 +71,4 @@ app.listen(port, (changedFiles) => {
   });
   console.log(`\n按下 Ctrl+C 关闭服务器\n或输入rs重新启动服务器`)
 });
-});
-// 服务器关闭时的处理
-process.on('SIGINT', () => {
-  console.log('\n服务器已关闭');
-  process.exit();
 });

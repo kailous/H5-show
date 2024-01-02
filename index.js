@@ -35,6 +35,10 @@ const components = loadComponents(componentsDirectory, packageData);
 const pagesDirectory = path.join(__dirname, '/pages');
 const pageModules = loadPages(pagesDirectory, components);
 
+// 读取并处理lottiefiles
+const lottiefilesDirectory = path.join(__dirname, '/public/lottiefiles');
+const lottiefiles = loadPages(lottiefilesDirectory, components);
+
 // 读取 index.html
 const indexHTML = fs.readFileSync(path.join(__dirname, '/index.html'), 'utf8');
 
@@ -55,10 +59,25 @@ app.get('/pages', (req, res) => {
   // 假设 pageModules 包含所有页面的内容
   res.json(pageModules);
 });
+// 定义lottiefiles路由
+app.get('/lottiefiles', (req, res) => {
+  fs.readdir(path.join(__dirname, '/public/lottiefiles'), (err, files) => {
+    if (err) {
+      res.status(500).send('服务器错误');
+      return;
+    }
+    const lottieFiles = files.filter(file => file.endsWith('.json'));
+    res.json(lottieFiles); // 确保这是一个数组
+  });
+});
+
+
 // 静态文件服务
 app.use(express.static('./'));
 // 设置根目录为静态文件目录
 app.use(express.static(path.join(__dirname, 'public')));
+// 设置lottiefiles目录为静态文件目录
+app.use('/lottiefiles', express.static(path.join(__dirname, 'public/lottiefiles')));
 
 // 获取本地IP地址
 const networkInterfaces = os.networkInterfaces();
@@ -116,7 +135,7 @@ function loadComponents(componentsDirectory, packageData) {
   return components;
 }
 
-
+// 辅助函数: loadComponents 和 loadPages
 function loadPages(pagesDirectory, components) {
   const pages = fs.readdirSync(pagesDirectory);
   let pageModules = {};
@@ -142,4 +161,19 @@ function loadPages(pagesDirectory, components) {
   });
 
   return pageModules;
+}
+
+// 辅助函数：loadLottiefiles 和 loadPages
+function loadLottiefiles(lottiefilesDirectory) {
+  const lottiefiles = fs.readdirSync(lottiefilesDirectory);
+  let lottiefileModules = {};
+
+  lottiefiles.forEach(lottiefile => {
+    if (lottiefile.endsWith('.json')) {
+      const lottiefileName = lottiefile.split('.')[0];
+      lottiefileModules[lottiefileName] = path.join(lottiefilesDirectory, lottiefile);
+    }
+  });
+
+  return lottiefileModules;
 }

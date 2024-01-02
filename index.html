@@ -3,13 +3,10 @@
 ${headHTML}
 
 <body>
-  <div id="fullpage">
-
-  </div>
+  <div id="fullpage"></div>
   <!-- 主页内容... -->
 </body>
-<script src="js/lottieAnimation.js"></script>
-<script>
+<script type="module">
   function generatePages(pages) {
 
     // 动态生成页面内容
@@ -31,8 +28,33 @@ ${headHTML}
       lastPageDiv.className = 'pages section lastPage';
     }
 
-    // 在动态内容加载后初始化动画
-    initTurnTipsAnimations();
+    fetch('/lottiefiles')
+  .then(response => response.json())
+  .then(files => {
+    files.forEach(fileName => {
+      // 从文件名获取相应的 class 名称
+      const className = fileName.replace('.json', '');
+      const containers = document.querySelectorAll(`.lottie.${className}`);
+
+      // 确保至少找到一个匹配的容器
+      if (containers.length === 0) {
+        console.error(`没有找到类名为 '${className}' 的 Lottie 容器`);
+        return;
+      }
+
+      containers.forEach(container => {
+        lottie.loadAnimation({
+          container: container, // 动画容器
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
+          path: `/lottiefiles/${fileName}` // 动画文件路径
+        });
+      });
+    });
+  })
+  .catch(err => console.error('无法加载 Lottie 文件:', err));
+
 
     // 确保fullpage.js初始化在页面内容加载之后
     new fullpage('#fullpage', {

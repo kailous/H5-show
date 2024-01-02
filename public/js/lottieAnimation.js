@@ -1,38 +1,30 @@
-// 初始化所有具有 'turnTips' 类的 Lottie 动画
-function initTurnTipsAnimations() {
-    const containers = document.querySelectorAll('.turnTips');
-    containers.forEach(container => {
-      const options = {
-        container: container,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: '/lottiefiles/turn-tips.json'
-      };
-      lottie.loadAnimation(options);
-    });
-  }
-  
-  // 初始化另一个Lottie动画
-  function initLottieAnimation2() {
-    const container = document.getElementById('lottieAnimation2');
-    if (container) {
-      const options = {
-        container: container,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: '/lottiefiles/animation2.json'
-      };
-      lottie.loadAnimation(options);
-    } else {
-      console.error('Element #lottieAnimation2 not found');
-    }
-  }
-  
-  // 当文档加载完成后调用函数以初始化动画
-  document.addEventListener('DOMContentLoaded', () => {
-    console.log(typeof initTurnTipsAnimations); // 应输出 'function'，如果未定义则输出 'undefined'
-    initTurnTipsAnimations();
+// 定义初始化 Lottie 动画的函数
+function initLottieAnimation(fileName) {
+  const className = fileName.replace('.json', '');
+  const containers = document.querySelectorAll(`.${className}`);
+  containers.forEach(container => {
+    const options = {
+      container: container,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: `/lottiefiles/${fileName}`
+    };
+    lottie.loadAnimation(options);
   });
-  
+}
+
+// 定义一个函数来获取并初始化所有 Lottie 动画
+function loadAndInitAnimations() {
+  fetch('/lottiefiles')
+    .then(response => response.json())
+    .then(files => {
+      files.forEach(file => {
+        initLottieAnimation(file);
+      });
+    })
+    .catch(err => console.error('无法加载动画文件:', err));
+}
+
+// 导出这个函数以在其他地方使用
+export { loadAndInitAnimations };

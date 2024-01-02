@@ -5,6 +5,7 @@
   "description": "h5 展示页面",
   "author": "kailous",
   "main": "index.js",
+  "cover": "/img/cover.png",
   "scripts": {
     "start": "node index.js"
   },

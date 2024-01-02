@@ -40,7 +40,7 @@ const pageCount = Object.keys(pageModules).length;
 
 const indexHTML = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
 
-app.use(express.static('public'));
+app.use(express.static('./'));
 
 const networkInterfaces = os.networkInterfaces();
 

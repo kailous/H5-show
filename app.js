@@ -11,6 +11,9 @@ const headHTML = require('./components/layout/head');
 
 // 导入页面
 const pageModules = require('./pages');
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // 在根路径的路由处理中插入index.html的内容
 app.get('/', (req, res) => {

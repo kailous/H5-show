@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
 // 静态文件服务
 app.use(express.static('./'));
 // 设置根目录为静态文件目录
-app.use(express.static(path.join(__dirname, '/')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // 获取本地IP地址
 const networkInterfaces = os.networkInterfaces();

@@ -9,7 +9,7 @@ const os = require('os');
 const formComponentHTML = require('./components/form-component');
 const headHTML = require('./components/layout/head');
 
-const pagesDirectory = path.join(__dirname, 'pages');
+const pagesDirectory = path.join(__dirname, '/pages');
 const pages = fs.readdirSync(pagesDirectory);
 let pageModules = {};
 
@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
 
 const pageCount = Object.keys(pageModules).length;
 
-const indexHTML = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
+const indexHTML = fs.readFileSync(path.join(__dirname, '/index.html'), 'utf8');
 
 app.use(express.static('./'));
 

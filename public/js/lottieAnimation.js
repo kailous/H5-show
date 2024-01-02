@@ -32,7 +32,7 @@ function initTurnTipsAnimations() {
   
   // 当文档加载完成后调用函数以初始化动画
   document.addEventListener('DOMContentLoaded', () => {
+    console.log(typeof initTurnTipsAnimations); // 应输出 'function'，如果未定义则输出 'undefined'
     initTurnTipsAnimations();
-    initLottieAnimation2();
   });
   

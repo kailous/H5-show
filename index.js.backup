@@ -29,15 +29,52 @@ const packageData = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
 
 // 读取并处理组件
 const componentsDirectory = path.join(__dirname, '/components');
-const components = loadComponents(componentsDirectory, packageData);
+const componentFiles = fs.readdirSync(componentsDirectory);
+let components = {};
+
+componentFiles.forEach(file => {
+  if (file.endsWith('.html')) {
+    const fileName = file.split('.')[0];
+    const filePath = path.join(componentsDirectory, file);
+    let fileContent = fs.readFileSync(filePath, 'utf8');
+
+    // 对特定文件（如 head.html）替换占位符
+    if (fileName === 'head') {
+      fileContent = replacePlaceholders(fileContent, packageData);
+    }
+
+    // 使用文件名（不含扩展名）作为键
+    components[fileName] = fileContent;
+  }
+});
 
 // 读取并处理页面
 const pagesDirectory = path.join(__dirname, '/pages');
-const pageModules = loadPages(pagesDirectory, components);
+const pages = fs.readdirSync(pagesDirectory);
+let pageModules = {};
+
+pages.forEach(page => {
+  if (page.endsWith('.html')) {
+    const pageName = page.split('.')[0];
+    const pagePath = path.join(pagesDirectory, page);
+    try {
+      let pageContent = fs.readFileSync(pagePath, 'utf8');
+
+      // 替换所有组件占位符
+      for (const [componentName, componentHTML] of Object.entries(components)) {
+        const placeholder = `\\$\\{${componentName}\\}`;
+        pageContent = pageContent.replace(new RegExp(placeholder, 'g'), componentHTML);
+      }
+
+      pageModules[pageName] = pageContent;
+    } catch (err) {
+      console.error(`读取页面 ${pageName} 失败: ${err}`);
+    }
+  }
+});
 
 // 读取 index.html
 const indexHTML = fs.readFileSync(path.join(__dirname, '/index.html'), 'utf8');
-
 
 // 定义根路由
 app.get('/', (req, res) => {
@@ -51,10 +88,7 @@ app.get('/', (req, res) => {
 
   res.send(completePageContent);
 });
-app.get('/pages', (req, res) => {
-  // 假设 pageModules 包含所有页面的内容
-  res.json(pageModules);
-});
+
 // 静态文件服务
 app.use(express.static('./'));
 // 设置根目录为静态文件目录
@@ -91,55 +125,3 @@ app.listen(port, () => {
     console.log(`\n按下 Ctrl+C 关闭服务器\n或输入rs重新启动服务器`)
   });
 });
-
-// 辅助函数: loadComponents 和 loadPages
-function loadComponents(componentsDirectory, packageData) {
-  const componentFiles = fs.readdirSync(componentsDirectory);
-  let components = {};
-
-  componentFiles.forEach(file => {
-    if (file.endsWith('.html')) {
-      const fileName = file.split('.')[0];
-      const filePath = path.join(componentsDirectory, file);
-      let fileContent = fs.readFileSync(filePath, 'utf8');
-
-      // 对特定文件（如 head.html）替换占位符
-      if (fileName === 'head') {
-        fileContent = replacePlaceholders(fileContent, packageData);
-      }
-
-      // 使用文件名（不含扩展名）作为键
-      components[fileName] = fileContent;
-    }
-  });
-
-  return components;
-}
-
-
-function loadPages(pagesDirectory, components) {
-  const pages = fs.readdirSync(pagesDirectory);
-  let pageModules = {};
-
-  pages.forEach(page => {
-    if (page.endsWith('.html')) {
-      const pageName = page.split('.')[0];
-      const pagePath = path.join(pagesDirectory, page);
-      try {
-        let pageContent = fs.readFileSync(pagePath, 'utf8');
-
-        // 替换所有组件占位符
-        for (const [componentName, componentHTML] of Object.entries(components)) {
-          const placeholder = `\\$\\{${componentName}\\}`;
-          pageContent = pageContent.replace(new RegExp(placeholder, 'g'), componentHTML);
-        }
-
-        pageModules[pageName] = pageContent;
-      } catch (err) {
-        console.error(`读取页面 ${pageName} 失败: ${err}`);
-      }
-    }
-  });
-
-  return pageModules;
-}

@@ -5,10 +5,11 @@ const path = require('path');
 const qrcode = require('qrcode-terminal');
 const os = require('os');
 
-
+// 导入组件
 const formComponentHTML = require('./components/form-component');
 const headHTML = require('./components/layout/head');
 
+// 读取并处理页面
 const pagesDirectory = path.join(__dirname, '/pages');
 const pages = fs.readdirSync(pagesDirectory);
 let pageModules = {};
@@ -17,33 +18,31 @@ pages.forEach(page => {
   if (page.endsWith('.html')) {
     const pageName = page.split('.')[0];
     const pagePath = path.join(pagesDirectory, page);
-    const pageContent = fs.readFileSync(pagePath, 'utf8');
-    pageModules[pageName] = pageContent.replace(/\${formComponentHTML}/g, formComponentHTML);
+    try {
+      const pageContent = fs.readFileSync(pagePath, 'utf8');
+      pageModules[pageName] = pageContent.replace(/\${formComponentHTML}/g, formComponentHTML);
+    } catch (err) {
+      console.error(`读取页面 ${pageName} 失败: ${err}`);
+    }
   }
 });
 
+// 读取 index.html
+const indexHTML = fs.readFileSync(path.join(__dirname, '/index.html'), 'utf8');
+
+// 定义根路由
 app.get('/', (req, res) => {
   const completePageContent = indexHTML
     .replace('${headHTML}', headHTML)
-    .replace('${page01}', pageModules['01'])
-    .replace('${page02}', pageModules['02'])
-    .replace('${page03}', pageModules['03'])
-    .replace('${page04}', pageModules['04'])
-    .replace('${page05}', pageModules['05'])
-    .replace('${page06}', pageModules['06'])
-    .replace('${page07}', pageModules['07'])
-    .replace('${page08}', pageModules['08'])
+    .replace(/\${page(\d+)}/g, (_, pageNumber) => pageModules[pageNumber] || `页面 ${pageNumber} 未找到`);
   res.send(completePageContent);
 });
 
-const pageCount = Object.keys(pageModules).length;
-
-const indexHTML = fs.readFileSync(path.join(__dirname, '/index.html'), 'utf8');
-
+// 静态文件服务
 app.use(express.static('./'));
 
+// 获取本地IP地址
 const networkInterfaces = os.networkInterfaces();
-
 const getLocalIPs = () => {
   const ips = [];
   for (const interfaceInfo of Object.values(networkInterfaces)) {
@@ -58,13 +57,14 @@ const getLocalIPs = () => {
   return ips.length > 0 ? ips : ['localhost'];
 };
 
+// 启动服务器
 const port = process.env.PORT || 3000;
 const localIPs = getLocalIPs();
 
 app.listen(port, () => {
   localIPs.forEach(ip => {
     console.log(`服务器开始运行：http://localhost:${port}`);
-    console.log(`\n共有${pageCount}个页面,请使用微信扫一扫预览.`);
+    console.log(`\n共有${Object.keys(pageModules).length}个页面,请使用微信扫一扫预览.`);
     console.log(`或者直接访问：http://${ip}:${port}`)
     qrcode.generate(`http://${ip}:${port}`, { small: true }, function (qrcode) {
       console.log(qrcode);

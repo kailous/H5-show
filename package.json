@@ -4,9 +4,9 @@
   "title": "谷乐齐鸣 龙跃九州",
   "description": "h5 展示页面",
   "author": "kailous",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "license": "ISC",
   "dependencies": {

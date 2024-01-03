@@ -1,26 +1,26 @@
 // /js/script.js
 
-// // 动态加载并初始化组件
-// async function loadAndInitComponents() {
-//     try {
-//         const response = await fetch('/components-list');
-//         const components = await response.json();
+// 动态加载并初始化组件
+async function loadAndInitComponents() {
+    try {
+        const response = await fetch('/components-list');
+        const components = await response.json();
 
-//         for (const component of components) {
-//             const modulePath = `/js/components/${component}`;
-//             const module = await import(modulePath);
-//             // 检查模块是否有默认导出，且函数名称是否符合Plugin_开头的命名约定
-//             if (module.default && /^Plugin_/.test(module.default.name)) {
-//                 console.log(`执行函数: ${module.default.name}`);
-//                 module.default();
-//             } else {
-//                 console.log(`在组件 ${component} 中未找到符合 'Plugin_' 命名的默认导出函数`);
-//             }
-//         }
-//     } catch (err) {
-//         console.error('Error loading components:', err);
-//     }
-// }
+        for (const component of components) {
+            const modulePath = `/js/components/${component}`;
+            const module = await import(modulePath);
+            // 检查模块是否有默认导出，且函数名称是否符合Plugin_开头的命名约定
+            if (module.default && /^Plugin_/.test(module.default.name)) {
+                console.log(`执行函数: ${module.default.name}`);
+                module.default();
+            } else {
+                console.log(`在组件 ${component} 中未找到符合 'Plugin_' 命名的默认导出函数`);
+            }
+        }
+    } catch (err) {
+        console.error('Error loading components:', err);
+    }
+}
 
 function generatePages(pages) {
     console.log('开始生成页面');
@@ -42,7 +42,7 @@ function generatePages(pages) {
         const lastPageDiv = pageDivs[pageDivs.length - 1];
         lastPageDiv.className = 'pages section lastPage';
     }
-    // loadAndInitComponents();
+    loadAndInitComponents();
     console.log('页面内容添加完毕');
     fetch('/lottiefiles')
         .then(response => response.json())

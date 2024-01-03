@@ -8,6 +8,7 @@ async function loadAndInitComponents() {
 
         for (const component of components) {
             const modulePath = `/js/components/${component}`;
+            console.log(modulePath); // 在这里打印模块路径
             const module = await import(modulePath);
             let pluginFunctionFound = false;
             Object.keys(module).forEach(exportedFunction => {
@@ -19,6 +20,7 @@ async function loadAndInitComponents() {
             });
             if (!pluginFunctionFound) {
                 console.log(`在组件 ${component} 中未找到符合 'Plugin_' 命名的函数`);
+                
             }
         }
     } catch (err) {

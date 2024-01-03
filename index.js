@@ -78,6 +78,7 @@ app.get('/components-list', (req, res) => {
       res.json(jsFiles);
   });
 });
+
 // 静态文件服务
 app.use(express.static('./'));
 // 设置根目录为静态文件目录

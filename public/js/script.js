@@ -8,21 +8,13 @@ async function loadAndInitComponents() {
 
         for (const component of components) {
             const modulePath = `/js/components/${component}`;
-            console.log(modulePath); // 在这里打印模块路径
             const module = await import(modulePath);
-            let pluginFunctionFound = false;
-            console.log(module);
-            Object.keys(module).forEach(exportedFunction => {
-                if (exportedFunction.startsWith('Plugin_')) {
-                    console.log(`执行函数: ${exportedFunction}`);
-                    
-                    module[exportedFunction]();
-                    pluginFunctionFound = true;
-                }
-            });
-            if (!pluginFunctionFound) {
-                console.log(`在组件 ${component} 中未找到符合 'Plugin_' 命名的函数`);
-                
+            // 检查模块是否有默认导出，且函数名称是否符合Plugin_开头的命名约定
+            if (module.default && /^Plugin_/.test(module.default.name)) {
+                console.log(`执行函数: ${module.default.name}`);
+                module.default();
+            } else {
+                console.log(`在组件 ${component} 中未找到符合 'Plugin_' 命名的默认导出函数`);
             }
         }
     } catch (err) {

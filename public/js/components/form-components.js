@@ -1,7 +1,7 @@
 // /js/components/form-components.js
 
 // 添加表单验证事件监听器
-export function Plugin_initFormValidation() {
+export default function Plugin_initFormValidation() {
     console.log('表单验证插件已加载');
     const contactForms = document.querySelectorAll('[id^="contactForm"]');
     

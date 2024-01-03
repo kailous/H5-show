@@ -53,5 +53,3 @@ export default function Plugin_initFormValidation() {
         }
     }
 };
-// Plugin_initFormValidation();
-// // export { Plugin_initFormValidation };

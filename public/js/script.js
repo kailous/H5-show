@@ -30,19 +30,6 @@ async function loadAndInitComponents() {
     }
 }
 
-// 静态导入/js/components中的所有组件
-import * as components from './components/form-components.js';
-console.log(components);
-Object.keys(components).forEach(exportedFunction => {
-    if (exportedFunction.startsWith('Plugin_')) {
-        console.log(`执行函数: ${exportedFunction}`);
-        components[exportedFunction]();
-    }
-});
-
-
-
-
 function generatePages(pages) {
     console.log('开始生成页面');
     const fullpageContainer = document.getElementById('fullpage');

@@ -1,42 +1,46 @@
 // /js/script.js
 
 // 动态加载并初始化组件
-// async function loadAndInitComponents() {
-//     try {
-//         const response = await fetch('/components-list');
-//         const components = await response.json();
+async function loadAndInitComponents() {
+    try {
+        const response = await fetch('/components-list');
+        const components = await response.json();
 
-//         for (const component of components) {
-//             const modulePath = `/js/components/${component}`;
-//             console.log(modulePath); // 在这里打印模块路径
-//             const module = await import(modulePath);
-//             let pluginFunctionFound = false;
-//             console.log(module);
-//             Object.keys(module).forEach(exportedFunction => {
-//                 if (exportedFunction.startsWith('Plugin_')) {
-//                     console.log(`执行函数: ${exportedFunction}`);
+        for (const component of components) {
+            const modulePath = `/js/components/${component}`;
+            console.log(modulePath); // 在这里打印模块路径
+            const module = await import(modulePath);
+            let pluginFunctionFound = false;
+            console.log(module);
+            Object.keys(module).forEach(exportedFunction => {
+                if (exportedFunction.startsWith('Plugin_')) {
+                    console.log(`执行函数: ${exportedFunction}`);
                     
-//                     module[exportedFunction]();
-//                     pluginFunctionFound = true;
-//                 }
-//             });
-//             if (!pluginFunctionFound) {
-//                 console.log(`在组件 ${component} 中未找到符合 'Plugin_' 命名的函数`);
+                    module[exportedFunction]();
+                    pluginFunctionFound = true;
+                }
+            });
+            if (!pluginFunctionFound) {
+                console.log(`在组件 ${component} 中未找到符合 'Plugin_' 命名的函数`);
                 
-//             }
-//         }
-//     } catch (err) {
-//         console.error('Error loading components:', err);
-//     }
-// }
-
-// loadAndInitComponents();
+            }
+        }
+    } catch (err) {
+        console.error('Error loading components:', err);
+    }
+}
 
 // 静态导入/js/components中的所有组件
+import * as components from './components/form-components.js';
+console.log(components);
+Object.keys(components).forEach(exportedFunction => {
+    if (exportedFunction.startsWith('Plugin_')) {
+        console.log(`执行函数: ${exportedFunction}`);
+        components[exportedFunction]();
+    }
+});
 
-// 导入./components/form-components.js
-import { Plugin_initFormValidation } from './components/form-components.js';
-Plugin_initFormValidation();
+
 
 
 function generatePages(pages) {
@@ -59,7 +63,7 @@ function generatePages(pages) {
         const lastPageDiv = pageDivs[pageDivs.length - 1];
         lastPageDiv.className = 'pages section lastPage';
     }
-
+    loadAndInitComponents();
     console.log('页面内容添加完毕');
     fetch('/lottiefiles')
         .then(response => response.json())

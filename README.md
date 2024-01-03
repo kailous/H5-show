@@ -1,4 +1,4 @@
-# H5-show
+# H5-MobiShowJS
 一个简易的H5展示开发框架
 
 ## 目录结构
@@ -21,7 +21,8 @@ project/
 │ ├── fonts/ # 字体库
 │ ├── css/ # 样式文件
 │ ├── js/ # JavaScript 文件
-│ └── img/ # 图片文件
+│ ├── img/ # 图片文件
+│ └── lottiefiles/ # 动画文件
 │
 ├── index.html # 入口 HTML 文件
 ├── index.js # 主要的 JavaScript 文件

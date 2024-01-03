@@ -35,10 +35,6 @@ const components = loadComponents(componentsDirectory, packageData);
 const pagesDirectory = path.join(__dirname, '/pages');
 const pageModules = loadPages(pagesDirectory, components);
 
-// 读取并处理lottiefiles
-const lottiefilesDirectory = path.join(__dirname, '/public/lottiefiles');
-const lottiefiles = loadPages(lottiefilesDirectory, components);
-
 // 读取 index.html
 const indexHTML = fs.readFileSync(path.join(__dirname, '/index.html'), 'utf8');
 
@@ -70,8 +66,18 @@ app.get('/lottiefiles', (req, res) => {
     res.json(lottieFiles); // 确保这是一个数组
   });
 });
-
-
+// 定义components-list路由
+app.get('/components-list', (req, res) => {
+  const componentsDir = path.join(__dirname, '/public/js/components');
+  fs.readdir(componentsDir, (err, files) => {
+      if (err) {
+          res.status(500).send('Error reading components directory');
+          return;
+      }
+      const jsFiles = files.filter(file => file.endsWith('.js'));
+      res.json(jsFiles);
+  });
+});
 // 静态文件服务
 app.use(express.static('./'));
 // 设置根目录为静态文件目录

@@ -9,14 +9,17 @@ async function loadAndInitComponents() {
         for (const component of components) {
             const modulePath = `/js/components/${component}`;
             const module = await import(modulePath);
+            let pluginFunctionFound = false;
             Object.keys(module).forEach(exportedFunction => {
                 if (exportedFunction.startsWith('Plugin_')) {
                     console.log(`执行函数: ${exportedFunction}`);
                     module[exportedFunction]();
-                } else {
-                    console.error(`在组件 ${component} 中未找到符合 'Plugin_' 命名的函数`);
+                    pluginFunctionFound = true;
                 }
             });
+            if (!pluginFunctionFound) {
+                console.log(`在组件 ${component} 中未找到符合 'Plugin_' 命名的函数`);
+            }
         }
     } catch (err) {
         console.error('Error loading components:', err);

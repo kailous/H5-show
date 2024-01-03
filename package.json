@@ -8,7 +8,7 @@
   "cover": "/img/cover.png",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.cjs"
   },
   "license": "ISC",
   "dependencies": {

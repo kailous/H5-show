@@ -6,6 +6,7 @@
   "author": "kailous",
   "main": "index.js",
   "cover": "/img/cover.png",
+  "type": "module",
   "scripts": {
     "start": "node index.js"
   },

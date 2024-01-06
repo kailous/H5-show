@@ -13,17 +13,6 @@ h1,h2,h3,h4,h5,h6,p,span,div{
     position: relative; 
     overflow: hidden;
 }
-.turn-tips {
-    width: 20px;
-    height: 40px;
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
-    z-index: 100;
-}
-.lastPage .pageContent .turn-tips {
-    display: none !important;
-}
 .pageContent {
     width: 100%;
     height: 100%;

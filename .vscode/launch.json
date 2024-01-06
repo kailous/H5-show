@@ -8,14 +8,21 @@
             "type": "node",
             "request": "launch",
             "name": "启动 Node",
-            "program": "${workspaceFolder}/app.js"
+            "program": "${workspaceFolder}/index.cjs"
         },
         {
-            "type": "msedge",
+            "type": "node",
             "request": "launch",
             "name": "针对 localhost 启动 Edge",
             "url": "http://localhost:3000",
-            "webRoot": "${workspaceFolder}"
+            "program": "${workspaceFolder}/index.cjs"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "移动端测试",
+            "url": "http://192.168.0.81:3000",
+            "program": "${workspaceFolder}/index.cjs"
         }
     ],
     "compounds": [

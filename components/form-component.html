@@ -67,40 +67,40 @@
 <!-- 页面结构 -->
 <form class="contactForm" id="contactForm" action="." method="post" novalidate>
     <div class="form-group">
-        <label for="name">
+        <label for="name" class="fs-4 fw-medium">
             姓名：
-            <div class="error-message name-error" id="name-error"></div>
+            <div class="error-message name-error fs-4" id="name-error"></div>
         </label>
-        <input class="name" type="text" id="name" name="name" required placeholder="请输入您的姓名" />
+        <input class="name fs-4" type="text" id="name" name="name" required placeholder="请输入您的姓名" />
     </div>
 
     <div class="form-group">
-        <label for="phone">
+        <label for="phone" class="fs-4 fw-medium">
             手机号码：
-            <div class="error-message phone-error" id="phone-error"></div>
+            <div class="error-message phone-error fs-4" id="phone-error"></div>
         </label>
-        <input class="phone" type="tel" id="phone" name="phone" required pattern="^[1][3-9][0-9]{9}$"
+        <input class="phone fs-4" type="tel" id="phone" name="phone" required pattern="^[1][3-9][0-9]{9}$"
             placeholder="请输入您的手机号码" />
     </div>
 
     <div class="form-group">
-        <label for="company">
+        <label for="company" class="fs-4 fw-medium">
             企业名称：
-            <div class="error-message company-error" id="company-error"></div>
+            <div class="error-message company-error fs-4" id="company-error"></div>
         </label>
-        <input class="company" type="text" id="company" name="company" required minlength="2" placeholder="请输入您的企业名称" />
+        <input class="company fs-4" type="text" id="company" name="company" required minlength="2" placeholder="请输入您的企业名称" />
     </div>
 
     <div class="form-group">
-        <label for="number">
+        <label for="number fs-4" class="fs-5 fw-medium">
             随行人数：
-            <div class="error-message number-error" id="number-error"></div>
+            <div class="error-message number-error fs-4" id="number-error"></div>
         </label>
-        <input class="number" type="number" id="number" name="number" placeholder="请输入随行人数" max="100" />
+        <input class="number fs-4" type="number" id="number" name="number" placeholder="请输入随行人数" max="100" />
     </div>
 
     <div class="form-group">
-        <button type="submit">提交</button>
+        <button type="submit" class="fs-4 fw-medium">提交</button>
     </div>
 </form>
 <script src="/js/components/form-components.js" ></script>

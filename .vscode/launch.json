@@ -13,22 +13,16 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "针对 localhost 启动 Edge",
+            "name": "本机测试",
             "url": "http://localhost:3000",
             "program": "${workspaceFolder}/index.cjs"
         },
         {
             "type": "node",
             "request": "launch",
-            "name": "移动端测试",
+            "name": "内网测试",
             "url": "http://192.168.0.81:3000",
             "program": "${workspaceFolder}/index.cjs"
-        }
-    ],
-    "compounds": [
-        {
-            "name": "Node + Edge",
-            "configurations": ["启动 Node", "针对 localhost 启动 Edge"]
         }
     ]
 }

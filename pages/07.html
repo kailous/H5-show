@@ -4,7 +4,7 @@
             background: radial-gradient(114.85% 114.46% at 100% 0%, color(display-p3 1 0.2902 0.7098) 0%, color(display-p3 1 0.1529 0.2471) 38.65%, color(display-p3 1 0.4157 0.1451) 100%);
       }
 
-      
+
 
       .map {
             border-radius: 30px;
@@ -15,26 +15,29 @@
             padding-bottom: 100px !important;
             justify-content: space-between !important;
             height: calc(100% - 50px - 50px) !important;
-            gap:5vh;
+            gap: 5vh;
       }
+
       .navigation h3 {
-    padding: 0;
-}
+            padding: 0;
+      }
+
       .navigation {
             display: flex;
-    gap: 15px;
-    flex-direction: column;
+            gap: 15px;
+            flex-direction: column;
       }
+
       .navigation button {
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: none;
-    width: max-content;
-    font-size: 16px;
-    font-weight: 500;
-    background-color: white;
-    color: #AD34FB;
-}
+            padding: 10px 20px;
+            border-radius: 30px;
+            border: none;
+            width: max-content;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: white;
+            color: #AD34FB;
+      }
 </style>
 <div class="pageContent">
       <div class="main mainbg">
@@ -47,13 +50,12 @@
                   alt="">
             <div class="navigation">
                   <h3>武汉市光谷温德姆花园酒店</h3>
-                  <a href="https://m.amap.com/share/index/lnglat=114.492489,30.483053&name=%E6%AD%A6%E6%B1%89%E5%85%89%E8%B0%B7%E6%B8%A9%E5%BE%B7%E5%A7%86%E8%8A%B1%E5%9B%AD%E9%85%92%E5%BA%97&src=uriapi&callnative=1&innersrc=uriapi" target="_parent">
+                  <a href="https://m.amap.com/share/index/lnglat=114.492489,30.483053&name=%E6%AD%A6%E6%B1%89%E5%85%89%E8%B0%B7%E6%B8%A9%E5%BE%B7%E5%A7%86%E8%8A%B1%E5%9B%AD%E9%85%92%E5%BA%97&src=uriapi&callnative=1&innersrc=uriapi"
+                        target="_parent">
                         <button>打开地图导航</button>
-                      </a>
+                  </a>
             </div>
       </div>
-      <div class="lottie turn-tips"></div>
-      <div class="long">
-            <img class="circularMove anim-loop anim-30_0s anim-linear" src="/img/long.png" alt="">
-      </div>
+      ${turn-tips}
+      ${long}
 </div>

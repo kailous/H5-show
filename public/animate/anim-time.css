@@ -1,484 +1,122 @@
-.anim-0_0s {
-    animation-duration: 0.0s;
-}
-
-.anim-0_25s {
-    animation-duration: 0.25s;
-}
-
-.anim-0_5s {
-    animation-duration: 0.5s;
-}
-
-.anim-0_75s {
-    animation-duration: 0.75s;
-}
-
-.anim-1_0s {
-    animation-duration: 1.0s;
-}
-
-.anim-1_25s {
-    animation-duration: 1.25s;
-}
-
-.anim-1_5s {
-    animation-duration: 1.5s;
-}
-
-.anim-1_75s {
-    animation-duration: 1.75s;
-}
-
-.anim-2_0s {
-    animation-duration: 2.0s;
-}
-
-.anim-2_25s {
-    animation-duration: 2.25s;
-}
-
-.anim-2_5s {
-    animation-duration: 2.5s;
-}
-
-.anim-2_75s {
-    animation-duration: 2.75s;
-}
-
-.anim-3_0s {
-    animation-duration: 3.0s;
-}
-
-.anim-3_25s {
-    animation-duration: 3.25s;
-}
-
-.anim-3_5s {
-    animation-duration: 3.5s;
-}
-
-.anim-3_75s {
-    animation-duration: 3.75s;
-}
-
-.anim-4_0s {
-    animation-duration: 4.0s;
-}
-
-.anim-4_25s {
-    animation-duration: 4.25s;
-}
-
-.anim-4_5s {
-    animation-duration: 4.5s;
-}
-
-.anim-4_75s {
-    animation-duration: 4.75s;
-}
-
-.anim-5_0s {
-    animation-duration: 5.0s;
-}
-
-
-.anim-5_25s {
-    animation-duration: 5.25s;
-}
-
-.anim-5_5s {
-    animation-duration: 5.5s;
-}
-
-.anim-5_75s {
-    animation-duration: 5.75s;
-}
-
-.anim-6_0s {
-    animation-duration: 6.0s;
-}
-
-.anim-6_25s {
-    animation-duration: 6.25s;
-}
-
-.anim-6_5s {
-    animation-duration: 6.5s;
-}
-
-.anim-6_75s {
-    animation-duration: 6.75s;
-}
-
-.anim-7_0s {
-    animation-duration: 7.0s;
-}
-
-.anim-7_25s {
-    animation-duration: 7.25s;
-}
-
-.anim-7_5s {
-    animation-duration: 7.5s;
-}
-
-.anim-7_75s {
-    animation-duration: 7.75s;
-}
-
-.anim-8_0s {
-    animation-duration: 8.0s;
-}
-
-.anim-8_25s {
-    animation-duration: 8.25s;
-}
-
-.anim-8_5s {
-    animation-duration: 8.5s;
-}
-
-.anim-8_75s {
-    animation-duration: 8.75s;
-}
-
-.anim-9_0s {
-    animation-duration: 9.0s;
-}
-
-.anim-9_25s {
-    animation-duration: 9.25s;
-}
-
-.anim-9_5s {
-    animation-duration: 9.5s;
-}
-
-.anim-9_75s {
-    animation-duration: 9.75s;
-}
-
-.anim-10_0s {
-    animation-duration: 10.0s;
-}
-
-.anim-10_25s {
-    animation-duration: 10.25s;
-}
-
-.anim-10_5s {
-    animation-duration: 10.5s;
-}
-
-.anim-10_75s {
-    animation-duration: 10.75s;
-}
-
-.anim-11_0s {
-    animation-duration: 11.0s;
-}
-
-.anim-11_25s {
-    animation-duration: 11.25s;
-}
-
-.anim-11_5s {
-    animation-duration: 11.5s;
-}
-
-.anim-11_75s {
-    animation-duration: 11.75s;
-}
-
-.anim-12_0s {
-    animation-duration: 12.0s;
-}
-
-.anim-12_25s {
-    animation-duration: 12.25s;
-}
-
-.anim-12_5s {
-    animation-duration: 12.5s;
-}
-
-.anim-12_75s {
-    animation-duration: 12.75s;
-}
-
-.anim-13_0s {
-    animation-duration: 13.0s;
-}
-
-.anim-13_25s {
-    animation-duration: 13.25s;
-}
-
-.anim-13_5s {
-    animation-duration: 13.5s;
-}
-
-.anim-13_75s {
-    animation-duration: 13.75s;
-}
-
-.anim-14_0s {
-    animation-duration: 14.0s;
-}
-
-.anim-14_25s {
-    animation-duration: 14.25s;
-}
-
-.anim-14_5s {
-    animation-duration: 14.5s;
-}
-
-.anim-14_75s {
-    animation-duration: 14.75s;
-}
-
-.anim-15_0s {
-    animation-duration: 15.0s;
-}
-
-.anim-15_25s {
-    animation-duration: 15.25s;
-}
-
-.anim-15_5s {
-    animation-duration: 15.5s;
-}
-
-.anim-15_75s {
-    animation-duration: 15.75s;
-}
-
-.anim-16_0s {
-    animation-duration: 16.0s;
-}
-
-.anim-16_25s {
-    animation-duration: 16.25s;
-}
-
-.anim-16_5s {
-    animation-duration: 16.5s;
-}
-
-.anim-16_75s {
-    animation-duration: 16.75s;
-}
-
-.anim-17_0s {
-    animation-duration: 17.0s;
-}
-
-.anim-17_25s {
-    animation-duration: 17.25s;
-}
-
-.anim-17_5s {
-    animation-duration: 17.5s;
-}
-
-.anim-17_75s {
-    animation-duration: 17.75s;
-}
-
-.anim-18_0s {
-    animation-duration: 18.0s;
-}
-
-.anim-18_25s {
-    animation-duration: 18.25s;
-}
-
-.anim-18_5s {
-    animation-duration: 18.5s;
-}
-
-.anim-18_75s {
-    animation-duration: 18.75s;
-}
-
-.anim-19_0s {
-    animation-duration: 19.0s;
-}
-
-.anim-19_25s {
-    animation-duration: 19.25s;
-}
-
-.anim-19_5s {
-    animation-duration: 19.5s;
-}
-
-.anim-19_75s {
-    animation-duration: 19.75s;
-}
-
-.anim-20_0s {
-    animation-duration: 20.0s;
-}
-
-.anim-20_25s {
-    animation-duration: 20.25s;
-}
-
-.anim-20_5s {
-    animation-duration: 20.5s;
-}
-
-.anim-20_75s {
-    animation-duration: 20.75s;
-}
-
-.anim-21_0s {
-    animation-duration: 21.0s;
-}
-
-.anim-21_25s {
-    animation-duration: 21.25s;
-}
-
-.anim-21_5s {
-    animation-duration: 21.5s;
-}
-
-.anim-21_75s {
-    animation-duration: 21.75s;
-}
-
-.anim-22_0s {
-    animation-duration: 22.0s;
-}
-
-.anim-22_25s {
-    animation-duration: 22.25s;
-}
-
-.anim-22_5s {
-    animation-duration: 22.5s;
-}
-
-.anim-22_75s {
-    animation-duration: 22.75s;
-}
-
-.anim-23_0s {
-    animation-duration: 23.0s;
-}
-
-.anim-23_25s {
-    animation-duration: 23.25s;
-}
-
-.anim-23_5s {
-    animation-duration: 23.5s;
-}
-
-.anim-23_75s {
-    animation-duration: 23.75s;
-}
-
-.anim-24_0s {
-    animation-duration: 24.0s;
-}
-
-.anim-24_25s {
-    animation-duration: 24.25s;
-}
-
-.anim-24_5s {
-    animation-duration: 24.5s;
-}
-
-.anim-24_75s {
-    animation-duration: 24.75s;
-}
-
-.anim-25_0s {
-    animation-duration: 25.0s;
-}
-
-.anim-25_25s {
-    animation-duration: 25.25s;
-}
-
-.anim-25_5s {
-    animation-duration: 25.5s;
-}
-
-.anim-25_75s {
-    animation-duration: 25.75s;
-}
-
-.anim-26_0s {
-    animation-duration: 26.0s;
-}
-
-.anim-26_25s {
-    animation-duration: 26.25s;
-}
-
-.anim-26_5s {
-    animation-duration: 26.5s;
-}
-
-.anim-26_75s {
-    animation-duration: 26.75s;
-}
-
-.anim-27_0s {
-    animation-duration: 27.0s;
-}
-
-.anim-27_25s {
-    animation-duration: 27.25s;
-}
-
-.anim-27_5s {
-    animation-duration: 27.5s;
-}
-
-.anim-27_75s {
-    animation-duration: 27.75s;
-}
-
-.anim-28_0s {
-    animation-duration: 28.0s;
-}
-
-.anim-28_25s {
-    animation-duration: 28.25s;
-}
-
-.anim-28_5s {
-    animation-duration: 28.5s;
-}
-
-.anim-28_75s {
-    animation-duration: 28.75s;
-}
-
-.anim-29_0s {
-    animation-duration: 29.0s;
-}
-
-.anim-29_25s {
-    animation-duration: 29.25s;
-}
-
-.anim-29_5s {
-    animation-duration: 29.5s;
-}
-
-.anim-29_75s {
-    animation-duration: 29.75s;
-}
-
-.anim-30_0s {
-    animation-duration: 30.0s;
-}
+/* 动画时长 */
+.anim-0s {animation-duration: 0.00s;} /* 0.00 秒 */
+.anim-0_25s {animation-duration: 0.25s;} /* 0.25 秒 */
+.anim-0_5s {animation-duration: 0.50s;} /* 0.50 秒 */
+.anim-0_75s {animation-duration: 0.75s;} /* 0.75 秒 */
+.anim-1s {animation-duration: 1.00s;} /* 1.00 秒 */
+.anim-1_25s {animation-duration: 1.25s;} /* 1.25 秒 */
+.anim-1_5s {animation-duration: 1.50s;} /* 1.50 秒 */
+.anim-1_75s {animation-duration: 1.75s;} /* 1.75 秒 */
+.anim-2s {animation-duration: 2.00s;} /* 2.00 秒 */
+.anim-2_25s {animation-duration: 2.25s;} /* 2.25 秒 */
+.anim-2_5s {animation-duration: 2.50s;} /* 2.50 秒 */
+.anim-2_75s {animation-duration: 2.75s;} /* 2.75 秒 */
+.anim-3s {animation-duration: 3.00s;} /* 3.00 秒 */
+.anim-3_25s {animation-duration: 3.25s;} /* 3.25 秒 */
+.anim-3_5s {animation-duration: 3.50s;} /* 3.50 秒 */
+.anim-3_75s {animation-duration: 3.75s;} /* 3.75 秒 */
+.anim-4s {animation-duration: 4.00s;} /* 4.00 秒 */
+.anim-4_25s {animation-duration: 4.25s;} /* 4.25 秒 */
+.anim-4_5s {animation-duration: 4.50s;} /* 4.50 秒 */
+.anim-4_75s {animation-duration: 4.75s;} /* 4.75 秒 */
+.anim-5s {animation-duration: 5.00s;} /* 5.00 秒 */
+.anim-5_25s {animation-duration: 5.25s;} /* 5.25 秒 */
+.anim-5_5s {animation-duration: 5.50s;} /* 5.50 秒 */
+.anim-5_75s {animation-duration: 5.75s;} /* 5.75 秒 */
+.anim-6s {animation-duration: 6.00s;} /* 6.00 秒 */
+.anim-6_25s {animation-duration: 6.25s;} /* 6.25 秒 */
+.anim-6_5s {animation-duration: 6.50s;} /* 6.50 秒 */
+.anim-6_75s {animation-duration: 6.75s;} /* 6.75 秒 */
+.anim-7s {animation-duration: 7.00s;} /* 7.00 秒 */
+.anim-7_25s {animation-duration: 7.25s;} /* 7.25 秒 */
+.anim-7_5s {animation-duration: 7.50s;} /* 7.50 秒 */
+.anim-7_75s {animation-duration: 7.75s;} /* 7.75 秒 */
+.anim-8s {animation-duration: 8.00s;} /* 8.00 秒 */
+.anim-8_25s {animation-duration: 8.25s;} /* 8.25 秒 */
+.anim-8_5s {animation-duration: 8.50s;} /* 8.50 秒 */
+.anim-8_75s {animation-duration: 8.75s;} /* 8.75 秒 */
+.anim-9s {animation-duration: 9.00s;} /* 9.00 秒 */
+.anim-9_25s {animation-duration: 9.25s;} /* 9.25 秒 */
+.anim-9_5s {animation-duration: 9.50s;} /* 9.50 秒 */
+.anim-9_75s {animation-duration: 9.75s;} /* 9.75 秒 */
+.anim-10s {animation-duration: 10.00s;} /* 10.00 秒 */
+.anim-10_25s {animation-duration: 10.25s;} /* 10.25 秒 */
+.anim-10_5s {animation-duration: 10.50s;} /* 10.50 秒 */
+.anim-10_75s {animation-duration: 10.75s;} /* 10.75 秒 */
+.anim-11s {animation-duration: 11.00s;} /* 11.00 秒 */
+.anim-11_25s {animation-duration: 11.25s;} /* 11.25 秒 */
+.anim-11_5s {animation-duration: 11.50s;} /* 11.50 秒 */
+.anim-11_75s {animation-duration: 11.75s;} /* 11.75 秒 */
+.anim-12s {animation-duration: 12.00s;} /* 12.00 秒 */
+.anim-12_25s {animation-duration: 12.25s;} /* 12.25 秒 */
+.anim-12_5s {animation-duration: 12.50s;} /* 12.50 秒 */
+.anim-12_75s {animation-duration: 12.75s;} /* 12.75 秒 */
+.anim-13s {animation-duration: 13.00s;} /* 13.00 秒 */
+.anim-13_25s {animation-duration: 13.25s;} /* 13.25 秒 */
+.anim-13_5s {animation-duration: 13.50s;} /* 13.50 秒 */
+.anim-13_75s {animation-duration: 13.75s;} /* 13.75 秒 */
+.anim-14s {animation-duration: 14.00s;} /* 14.00 秒 */
+.anim-14_25s {animation-duration: 14.25s;} /* 14.25 秒 */
+.anim-14_5s {animation-duration: 14.50s;} /* 14.50 秒 */
+.anim-14_75s {animation-duration: 14.75s;} /* 14.75 秒 */
+.anim-15s {animation-duration: 15.00s;} /* 15.00 秒 */
+.anim-15_25s {animation-duration: 15.25s;} /* 15.25 秒 */
+.anim-15_5s {animation-duration: 15.50s;} /* 15.50 秒 */
+.anim-15_75s {animation-duration: 15.75s;} /* 15.75 秒 */
+.anim-16s {animation-duration: 16.00s;} /* 16.00 秒 */
+.anim-16_25s {animation-duration: 16.25s;} /* 16.25 秒 */
+.anim-16_5s {animation-duration: 16.50s;} /* 16.50 秒 */
+.anim-16_75s {animation-duration: 16.75s;} /* 16.75 秒 */
+.anim-17s {animation-duration: 17.00s;} /* 17.00 秒 */
+.anim-17_25s {animation-duration: 17.25s;} /* 17.25 秒 */
+.anim-17_5s {animation-duration: 17.50s;} /* 17.50 秒 */
+.anim-17_75s {animation-duration: 17.75s;} /* 17.75 秒 */
+.anim-18s {animation-duration: 18.00s;} /* 18.00 秒 */
+.anim-18_25s {animation-duration: 18.25s;} /* 18.25 秒 */
+.anim-18_5s {animation-duration: 18.50s;} /* 18.50 秒 */
+.anim-18_75s {animation-duration: 18.75s;} /* 18.75 秒 */
+.anim-19s {animation-duration: 19.00s;} /* 19.00 秒 */
+.anim-19_25s {animation-duration: 19.25s;} /* 19.25 秒 */
+.anim-19_5s {animation-duration: 19.50s;} /* 19.50 秒 */
+.anim-19_75s {animation-duration: 19.75s;} /* 19.75 秒 */
+.anim-20s {animation-duration: 20.00s;} /* 20.00 秒 */
+.anim-20_25s {animation-duration: 20.25s;} /* 20.25 秒 */
+.anim-20_5s {animation-duration: 20.50s;} /* 20.50 秒 */
+.anim-20_75s {animation-duration: 20.75s;} /* 20.75 秒 */
+.anim-21s {animation-duration: 21.00s;} /* 21.00 秒 */
+.anim-21_25s {animation-duration: 21.25s;} /* 21.25 秒 */
+.anim-21_5s {animation-duration: 21.50s;} /* 21.50 秒 */
+.anim-21_75s {animation-duration: 21.75s;} /* 21.75 秒 */
+.anim-22s {animation-duration: 22.00s;} /* 22.00 秒 */
+.anim-22_25s {animation-duration: 22.25s;} /* 22.25 秒 */
+.anim-22_5s {animation-duration: 22.50s;} /* 22.50 秒 */
+.anim-22_75s {animation-duration: 22.75s;} /* 22.75 秒 */
+.anim-23s {animation-duration: 23.00s;} /* 23.00 秒 */
+.anim-23_25s {animation-duration: 23.25s;} /* 23.25 秒 */
+.anim-23_5s {animation-duration: 23.50s;} /* 23.50 秒 */
+.anim-23_75s {animation-duration: 23.75s;} /* 23.75 秒 */
+.anim-24s {animation-duration: 24.00s;} /* 24.00 秒 */
+.anim-24_25s {animation-duration: 24.25s;} /* 24.25 秒 */
+.anim-24_5s {animation-duration: 24.50s;} /* 24.50 秒 */
+.anim-24_75s {animation-duration: 24.75s;} /* 24.75 秒 */
+.anim-25s {animation-duration: 25.00s;} /* 25.00 秒 */
+.anim-25_25s {animation-duration: 25.25s;} /* 25.25 秒 */
+.anim-25_5s {animation-duration: 25.50s;} /* 25.50 秒 */
+.anim-25_75s {animation-duration: 25.75s;} /* 25.75 秒 */
+.anim-26s {animation-duration: 26.00s;} /* 26.00 秒 */
+.anim-26_25s {animation-duration: 26.25s;} /* 26.25 秒 */
+.anim-26_5s {animation-duration: 26.50s;} /* 26.50 秒 */
+.anim-26_75s {animation-duration: 26.75s;} /* 26.75 秒 */
+.anim-27s {animation-duration: 27.00s;} /* 27.00 秒 */
+.anim-27_25s {animation-duration: 27.25s;} /* 27.25 秒 */
+.anim-27_5s {animation-duration: 27.50s;} /* 27.50 秒 */
+.anim-27_75s {animation-duration: 27.75s;} /* 27.75 秒 */
+.anim-28s {animation-duration: 28.00s;} /* 28.00 秒 */
+.anim-28_25s {animation-duration: 28.25s;} /* 28.25 秒 */
+.anim-28_5s {animation-duration: 28.50s;} /* 28.50 秒 */
+.anim-28_75s {animation-duration: 28.75s;} /* 28.75 秒 */
+.anim-29s {animation-duration: 29.00s;} /* 29.00 秒 */
+.anim-29_25s {animation-duration: 29.25s;} /* 29.25 秒 */
+.anim-29_5s {animation-duration: 29.50s;} /* 29.50 秒 */
+.anim-29_75s {animation-duration: 29.75s;} /* 29.75 秒 */
+.anim-30s {animation-duration: 30.00s;} /* 30.00 秒 */

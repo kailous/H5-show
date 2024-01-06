@@ -6,43 +6,44 @@
 
 
       .blandItem {
-    display: flex;
-    flex-direction: row;
-    padding: 20px 0;
-    align-items: center;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-hr {
-    height: 0;
-    opacity: 0.5;
-    border: 0.5px solid #ffffff;
-}
+            display: flex;
+            flex-direction: row;
+            padding: 20px 0;
+            align-items: center;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+      }
 
-.blandItem p {
-    width: 125px;
-}
+      hr {
+            height: 0;
+            opacity: 0.5;
+            border: 0.5px solid #ffffff;
+      }
+
+      .blandItem p {
+            width: 125px;
+      }
 </style>
 <div class="pageContent">
       <div class="main mainbg">
-            <p>POLY VOLY成立于2016年，是⼀家聚焦新世代美好生活的多品牌公司，专注于挖掘具有创新价值美妆个护品牌，旗下现已推出：</p>
+            <p class="fw-regular fh-160 fs-4 fa-justify">POLY VOLY成立于2016年，是⼀家聚焦新世代美好生活的多品牌公司，专注于挖掘具有创新价值美妆个护品牌，旗下现已推出：
+            </p>
             <div class="bland">
                   <hr>
                   <div class="blandItem">
                         <img src="/img/sangu.svg" alt="">
-                        <p>三⾕<br>科学美护发品牌</p>
+                        <p class="fw-regular fh-160 fs-4 fa-justify">三⾕<br>科学美护发品牌</p>
                   </div>
                   <hr>
                   <div class="blandItem">
                         <img src="/img/rever.svg" alt="">
-                        <p>REVER<br>创新精油个护品牌</p>
+                        <p class="fw-regular fh-160 fs-4 fa-justify">REVER<br>创新精油个护品牌</p>
                   </div>
                   <hr>
             </div>
-            <p>公司发展迅速，收获了良好的市场声量与销量，并先后获得了<b>6轮融资</b>。目标成为<b>矩阵式多品牌运营</b>、全渠道铺设的新思维化妆品集团公司！</p>
+            <p class="fw-regular fh-160 fs-4 fa-justify">
+                  公司发展迅速，收获了良好的市场声量与销量，并先后获得了<b>6轮融资</b>。目标成为<b>矩阵式多品牌运营</b>、全渠道铺设的新思维化妆品集团公司！</p>
       </div>
-      <div class="lottie turn-tips"></div>
-      <div class="long">
-            <img class="circularMove anim-loop anim-30_0s anim-linear" src="/img/long.png" alt="">
-      </div>
+      ${turn-tips}
+      ${long}
 </div>

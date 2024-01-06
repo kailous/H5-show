@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "HarmonyOSHans";
+    font-weight: 100; /* 对应 thin 字重 */
+    font-display: swap;
+    font-style: normal;
+    src: url("HarmonyOSHans/HarmonyOSHans-Thin.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "HarmonyOSHans";
+    font-weight: 300; /* 对应 lighter 字重 */
+    font-display: swap;
+    font-style: normal;
+    src: url("HarmonyOSHans/HarmonyOSHans-Light.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "HarmonyOSHans";
+    font-weight: 400; /* 对应 regular 字重 */
+    font-display: swap;
+    font-style: normal;
+    src: url("HarmonyOSHans/HarmonyOSHans-Regular.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "HarmonyOSHans";
+    font-weight: 500; /* 对应 medium 字重 */
+    font-display: swap;
+    font-style: normal;
+    src: url("HarmonyOSHans/HarmonyOSHans-Medium.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "HarmonyOSHans";
+    font-weight: 700; /* 对应 bold 字重 */
+    font-display: swap;
+    font-style: normal;
+    src: url("HarmonyOSHans/HarmonyOSHans-Bold.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "HarmonyOSHans";
+    font-weight: 900; /* 对应 black 字重 */
+    font-display: swap;
+    font-style: normal;
+    src: url("HarmonyOSHans/HarmonyOSHans-Black.woff2") format("woff2");
+  }

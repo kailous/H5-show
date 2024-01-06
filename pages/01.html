@@ -30,30 +30,9 @@
 
       .text {
             display: flex;
-    /* color: #fff; */
-    gap: 20px;
-    flex-direction: column;
-      }
-      .text h1 {
-            /* 字体大小72px转位vm */
-            font-size: 20vw;
-            font-style: normal;
-            font-weight: 900;
-            line-height: 120%;
-      }
-
-      .text h4 {
-            font-size: 7vw;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 120%;
-      }
-
-      h5 {
-            font-size: 5.5vw;
-            font-style: normal;
-            font-weight: 300;
-            line-height: 110%;
+            /* color: #fff; */
+            gap: 20px;
+            flex-direction: column;
       }
 </style>
 <div class="pageContent">
@@ -62,14 +41,12 @@
                   <img src="img/LOGO.svg" alt="">
             </div>
             <div class="text">
-                  <h1>谷乐齐鸣<br>龙跃九州</h1>
-                  <h4>三谷·乐若<br>2024年 战略发布会</h4>
+                  <h1 class="fw-black fs-20 fh-110">谷乐齐鸣<br>龙跃九州</h1>
+                  <h4 class="fw-medium fs-7 fh-110">三谷·乐若<br>2024年 战略发布会</h4>
             </div>
-            <h5>IN<br>2024</h5> 
+            <h5 class="fw-thin fs-5 fh-110">IN<br>2024</h5>
       </div>
-            <div class="lottie turn-tips"></div>
-            <div class="long">
-                  <img class="circularMove anim-loop anim-30_0s anim-linear" src="img/long.png" alt="">
-            </div>
-      
+      ${turn-tips}
+      ${long}
+
 </div>

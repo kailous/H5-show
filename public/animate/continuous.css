@@ -1,7 +1,5 @@
 /* 漂浮动画 */
-.circularMove {
-    animation-name: circularMove;
-}
+.circularMove {animation-name: circularMove;}
 @keyframes circularMove {
     0% {
         transform: translateX(0) translateY(20px); /* 初始位置 */

@@ -1,27 +1,7 @@
-.anim-linear {
-    animation-timing-function: linear;
-}
-
-.anim-ease {
-    animation-timing-function: ease;
-}
-
-.anim-ease-in {
-    animation-timing-function: ease-in;
-}
-
-.anim-ease-out {
-    animation-timing-function: ease-out;
-}
-
-.anim-ease-in-out {
-    animation-timing-function: ease-in-out;
-}
-
-.anim-step-start {
-    animation-timing-function: step-start;
-}
-
-.anim-step-end {
-    animation-timing-function: step-end;
-}
+.anim-linear {animation-timing-function: linear;} /* 线性 */
+.anim-ease {animation-timing-function: ease;} /* 缓入缓出 */
+.anim-ease-in {animation-timing-function: ease-in;} /* 缓入 */
+.anim-ease-out {animation-timing-function: ease-out;} /* 缓出 */
+.anim-ease-in-out {animation-timing-function: ease-in-out;} /* 缓入缓出 */
+.anim-step-start {animation-timing-function: step-start;} /* 逐帧开始 */
+.anim-step-end {animation-timing-function: step-end;} /* 逐帧结束 */

@@ -1,54 +1,12 @@
-/* 无限循环 */
-.anim-loop {
-    animation-iteration-count: infinite;
-}
-
-/* 不重复 */
-.anim-repeat-1 {
-    animation-iteration-count: 1;
-}
-
-/* 重复两次 */
-.anim-repeat-2 {
-    animation-iteration-count: 2;
-}
-
-/* 重复三次 */
-.anim-repeat-3 {
-    animation-iteration-count: 3;
-}
-
-/* 重复四次 */
-.anim-repeat-4 {
-    animation-iteration-count: 4;
-}
-
-/* 重复五次 */
-.anim-repeat-5 {
-    animation-iteration-count: 5;
-}
-
-/* 重复六次 */
-.anim-repeat-6 {
-    animation-iteration-count: 6;
-}
-
-/* 重复七次 */
-.anim-repeat-7 {
-    animation-iteration-count: 7;
-}
-
-/* 重复八次 */
-.anim-repeat-8 {
-    animation-iteration-count: 8;
-}
-
-/* 重复九次 */
-.anim-repeat-9 {
-    animation-iteration-count: 9;
-}
-
-/* 重复十次 */
-.anim-repeat-10 {
-    animation-iteration-count: 10;
-}
+/* 动画重复次数 */
+.anim-loop {animation-iteration-count: infinite;} /* 无限循环 */
+.anim-repeat-1 {animation-iteration-count: 1;} /* 不重复 */
+.anim-repeat-2 {animation-iteration-count: 2;} /* 重复两次 */
+.anim-repeat-3 {animation-iteration-count: 3;} /* 重复三次 */
+.anim-repeat-4 {animation-iteration-count: 4;} /* 重复四次 */
+.anim-repeat-5 {animation-iteration-count: 5;} /* 重复五次 */
+.anim-repeat-6 {animation-iteration-count: 6;} /* 重复六次 */
+.anim-repeat-7 {animation-iteration-count: 7;} /* 重复七次 */
+.anim-repeat-8 {animation-iteration-count: 8;} /* 重复八次 */
+.anim-repeat-9 {animation-iteration-count: 9;} /* 重复九次 */
+.anim-repeat-10 {animation-iteration-count: 10;} /* 重复十次 */

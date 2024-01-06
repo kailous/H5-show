@@ -1,8 +1,4 @@
 @import url('../fonts/HarmonyOSHans.css'); /* 加载字体 */
-@import url('font-size.css'); /* 加载字体大小 */
-@import url('font-weight.css'); /* 加载字体粗细 */
-@import url('font-line-height.css'); /* 加载字体行高 */
-@import url('font-align.css'); /* 加载字体对齐 */
 
 body {
     font-family: 'HarmonyOSHans', sans-serif;

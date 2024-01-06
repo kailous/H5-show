@@ -1,3 +1,25 @@
+/* 动画重复次数 */
+.anim-loop {animation-iteration-count: infinite;} /* 无限循环 */
+.anim-repeat-1 {animation-iteration-count: 1;} /* 不重复 */
+.anim-repeat-2 {animation-iteration-count: 2;} /* 重复两次 */
+.anim-repeat-3 {animation-iteration-count: 3;} /* 重复三次 */
+.anim-repeat-4 {animation-iteration-count: 4;} /* 重复四次 */
+.anim-repeat-5 {animation-iteration-count: 5;} /* 重复五次 */
+.anim-repeat-6 {animation-iteration-count: 6;} /* 重复六次 */
+.anim-repeat-7 {animation-iteration-count: 7;} /* 重复七次 */
+.anim-repeat-8 {animation-iteration-count: 8;} /* 重复八次 */
+.anim-repeat-9 {animation-iteration-count: 9;} /* 重复九次 */
+.anim-repeat-10 {animation-iteration-count: 10;} /* 重复十次 */
+
+/* 动画播放状态 */
+.anim-linear {animation-timing-function: linear;} /* 线性 */
+.anim-ease {animation-timing-function: ease;} /* 缓入缓出 */
+.anim-ease-in {animation-timing-function: ease-in;} /* 缓入 */
+.anim-ease-out {animation-timing-function: ease-out;} /* 缓出 */
+.anim-ease-in-out {animation-timing-function: ease-in-out;} /* 缓入缓出 */
+.anim-step-start {animation-timing-function: step-start;} /* 逐帧开始 */
+.anim-step-end {animation-timing-function: step-end;} /* 逐帧结束 */
+
 /* 动画时长 */
 .anim-0s {animation-duration: 0.00s;} /* 0.00 秒 */
 .anim-0_25s {animation-duration: 0.25s;} /* 0.25 秒 */

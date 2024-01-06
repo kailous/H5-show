@@ -5,7 +5,7 @@
   "description": "h5 展示页面",
   "author": "kailous",
   "main": "index.js",
-  "cover": "/img/cover.png",
+  "cover": "https://h5show-7g2u8xv1394f69bb-1300172532.tcloudbaseapp.com/public/img/cover.png",
   "type": "module",
   "scripts": {
     "start": "node index.cjs"

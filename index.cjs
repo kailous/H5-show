@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const qrcode = require('qrcode-terminal');
 const os = require('os');
+const { default: e } = require('express');
 
 // 首先配置 body-parser 中间件
 app.use(bodyParser.json({ limit: '50mb' }));
@@ -18,7 +19,7 @@ function replacePlaceholders(html, data) {
   let result = html;
   for (const key in data) {
     const placeholder = new RegExp('{{' + key + '}}', 'g');
-    result = result.replace(placeholder, data[key] || `默认${key}`);
+    result = result.replace(placeholder, data[key] || ``);
   }
   return result;
 }
@@ -33,7 +34,23 @@ const components = loadComponents(componentsDirectory, packageData);
 
 // 读取并处理页面
 const pagesDirectory = path.join(__dirname, '/pages');
-const pageModules = loadPages(pagesDirectory, components);
+const pageModules = loadPages(pagesDirectory, components, packageData);
+
+// 读取public/fonts目录下的所有css文件 并替换占位符{{cdn}}
+const fontsDirectory = path.join(__dirname, '/public/fonts');
+const fonts = fs.readdirSync(fontsDirectory);
+fonts.forEach(font => {
+  if (font.endsWith('.css')) {
+    const fontPath = path.join(fontsDirectory, font);
+    let fontContent = fs.readFileSync(fontPath, 'utf8');
+    if (packageData && packageData.cdn) {
+      fontContent = fontContent.replace(/\{\{cdn\}\}/g, packageData.cdn);
+    } else {
+      fontContent = fontContent.replace(/\{\{cdn\}\}/g, '');
+    }
+    fs.writeFileSync(fontPath, fontContent);
+  }
+});
 
 // 读取 index.html
 const indexHTML = fs.readFileSync(path.join(__dirname, '/index.html'), 'utf8');
@@ -129,10 +146,8 @@ function loadComponents(componentsDirectory, packageData) {
       const filePath = path.join(componentsDirectory, file);
       let fileContent = fs.readFileSync(filePath, 'utf8');
 
-      // 对特定文件（如 head.html）替换占位符
-      if (fileName === 'head') {
-        fileContent = replacePlaceholders(fileContent, packageData);
-      }
+      // 对所有文件替换占位符
+      fileContent = replacePlaceholders(fileContent, packageData);
 
       // 使用文件名（不含扩展名）作为键
       components[fileName] = fileContent;
@@ -142,13 +157,18 @@ function loadComponents(componentsDirectory, packageData) {
   return components;
 }
 
-// 辅助函数: loadComponents 和 loadPages
-function loadPages(pagesDirectory, components) {
+// 读取并处理页面
+function loadPages(pagesDirectory, components, packageData) {
+
+  console.log("loadPages 被调用"); // 确认函数被调用
+  console.log("packageData:", packageData); // 查看 packageData 的内容
+
   const pages = fs.readdirSync(pagesDirectory);
   let pageModules = {};
 
   pages.forEach(page => {
     if (page.endsWith('.html')) {
+
       const pageName = page.split('.')[0];
       const pagePath = path.join(pagesDirectory, page);
       try {
@@ -160,6 +180,15 @@ function loadPages(pagesDirectory, components) {
           pageContent = pageContent.replace(new RegExp(placeholder, 'g'), componentHTML);
         }
 
+        // 如果packageData中的cdn属性存在，则使用实际的cdn值进行替换
+        if (packageData && packageData.cdn) {
+          console.log(packageData.cdn);
+          pageContent = pageContent.replace(/\{\{cdn\}\}/g, packageData.cdn);
+        } else {
+          console.log('没有找到cdn');
+          pageContent = pageContent.replace(/\{\{cdn\}\}/g, '');
+        }
+
         pageModules[pageName] = pageContent;
       } catch (err) {
         console.error(`读取页面 ${pageName} 失败: ${err}`);
@@ -169,6 +198,8 @@ function loadPages(pagesDirectory, components) {
 
   return pageModules;
 }
+
+
 
 // 辅助函数：loadLottiefiles 和 loadPages
 function loadLottiefiles(lottiefilesDirectory) {

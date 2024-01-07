@@ -145,9 +145,6 @@ function loadComponents(componentsDirectory, packageData) {
 // 读取并处理页面
 function loadPages(pagesDirectory, components, packageData) {
 
-  console.log("loadPages 被调用"); // 确认函数被调用
-  console.log("packageData:", packageData); // 查看 packageData 的内容
-
   const pages = fs.readdirSync(pagesDirectory);
   let pageModules = {};
 
@@ -167,7 +164,7 @@ function loadPages(pagesDirectory, components, packageData) {
 
         // 如果packageData中的cdn属性存在，则使用实际的cdn值进行替换
         if (packageData && packageData.cdn) {
-          console.log(packageData.cdn);
+          // console.log(packageData.cdn);
           pageContent = pageContent.replace(/\{\{cdn\}\}/g, packageData.cdn);
         } else {
           console.log('没有找到cdn');

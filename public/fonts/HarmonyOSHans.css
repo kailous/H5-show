@@ -3,7 +3,7 @@
     font-weight: 100; /* 对应 thin 字重 */
     font-display: swap;
     font-style: normal;
-    src: url("https://h5show-7g2u8xv1394f69bb-1300172532.tcloudbaseapp.com/public/fonts/HarmonyOSHans/HarmonyOSHans-Thin.woff2") format("woff2");
+    src: url("https://kaious-1300172532.cos.ap-chengdu.myqcloud.com/HarmonyOSHans/HarmonyOSHans-Thin.woff2") format("woff2");
   }
   
   @font-face {
@@ -11,7 +11,7 @@
     font-weight: 300; /* 对应 lighter 字重 */
     font-display: swap;
     font-style: normal;
-    src: url("https://h5show-7g2u8xv1394f69bb-1300172532.tcloudbaseapp.com/public/fonts/HarmonyOSHans/HarmonyOSHans-Light.woff2") format("woff2");
+    src: url("https://kaious-1300172532.cos.ap-chengdu.myqcloud.com/HarmonyOSHans/HarmonyOSHans-Light.woff2") format("woff2");
   }
   
   @font-face {
@@ -19,7 +19,7 @@
     font-weight: 400; /* 对应 regular 字重 */
     font-display: swap;
     font-style: normal;
-    src: url("https://h5show-7g2u8xv1394f69bb-1300172532.tcloudbaseapp.com/public/fonts/HarmonyOSHans/HarmonyOSHans-Regular.woff2") format("woff2");
+    src: url("https://kaious-1300172532.cos.ap-chengdu.myqcloud.com/HarmonyOSHans/HarmonyOSHans-Regular.woff2") format("woff2");
   }
   
   @font-face {
@@ -27,7 +27,7 @@
     font-weight: 500; /* 对应 medium 字重 */
     font-display: swap;
     font-style: normal;
-    src: url("https://h5show-7g2u8xv1394f69bb-1300172532.tcloudbaseapp.com/public/fonts/HarmonyOSHans/HarmonyOSHans-Medium.woff2") format("woff2");
+    src: url("https://kaious-1300172532.cos.ap-chengdu.myqcloud.com/HarmonyOSHans/HarmonyOSHans-Medium.woff2") format("woff2");
   }
   
   @font-face {
@@ -35,7 +35,7 @@
     font-weight: 700; /* 对应 bold 字重 */
     font-display: swap;
     font-style: normal;
-    src: url("https://h5show-7g2u8xv1394f69bb-1300172532.tcloudbaseapp.com/public/fonts/HarmonyOSHans/HarmonyOSHans-Bold.woff2") format("woff2");
+    src: url("https://kaious-1300172532.cos.ap-chengdu.myqcloud.com/HarmonyOSHans/HarmonyOSHans-Bold.woff2") format("woff2");
   }
   
   @font-face {
@@ -43,5 +43,5 @@
     font-weight: 900; /* 对应 black 字重 */
     font-display: swap;
     font-style: normal;
-    src: url("https://h5show-7g2u8xv1394f69bb-1300172532.tcloudbaseapp.com/public/fonts/HarmonyOSHans/HarmonyOSHans-Black.woff2") format("woff2");
+    src: url("https://kaious-1300172532.cos.ap-chengdu.myqcloud.com/HarmonyOSHans/HarmonyOSHans-Black.woff2") format("woff2");
   }

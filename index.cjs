@@ -36,21 +36,6 @@ const components = loadComponents(componentsDirectory, packageData);
 const pagesDirectory = path.join(__dirname, '/pages');
 const pageModules = loadPages(pagesDirectory, components, packageData);
 
-// 读取public/fonts目录下的所有css文件 并替换占位符{{cdn}}
-const fontsDirectory = path.join(__dirname, '/public/fonts');
-const fonts = fs.readdirSync(fontsDirectory);
-fonts.forEach(font => {
-  if (font.endsWith('.css')) {
-    const fontPath = path.join(fontsDirectory, font);
-    let fontContent = fs.readFileSync(fontPath, 'utf8');
-    if (packageData && packageData.cdn) {
-      fontContent = fontContent.replace(/\{\{cdn\}\}/g, packageData.cdn);
-    } else {
-      fontContent = fontContent.replace(/\{\{cdn\}\}/g, '');
-    }
-    fs.writeFileSync(fontPath, fontContent);
-  }
-});
 
 // 读取 index.html
 const indexHTML = fs.readFileSync(path.join(__dirname, '/index.html'), 'utf8');
